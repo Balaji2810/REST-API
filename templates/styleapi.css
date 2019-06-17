@@ -1,0 +1,17 @@
+table
+{
+ 
+ border-collapse: collapse;
+}
+th,td
+{
+ text-align: left;
+ padding: 8 px;
+ }
+ th{
+  border: 1px solid white;
+
+ }
+ tr:nth-child(odd){
+ background-color: #d2d4d8;
+ }

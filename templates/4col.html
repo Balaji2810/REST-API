@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Home | REST API</title>
+<meta name="viewport" content="width=device-width",initial-scale="1.0">
+<style>
+table
+{
+ 
+ border-collapse: collapse;
+}
+th,td
+{
+ text-align: center;
+ padding: 8 px;
+ 
+ }
+ th{
+  border: 1px solid white;
+
+ }
+ tr:nth-child(odd){
+ background-color: #d2d4d8;
+ }
+</style>
+</head>
+<body>
+<center>
+<div>
+<br><br><br><hr><h1>Home</h1><hr>
+<h3>Menu</h3>
+<table id=table1_4cols>
+<tr>
+<th>Food id</th>
+<th>Name</th>
+<th>Cost</th>
+
+</tr>
+{% for i in t1 %}
+<tr>
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[2]}}</td>
+</tr>
+{% endfor %}
+</table>
+<br><br><br><hr>
+</div>
+<div>
+<h3>Customers</h3>
+<table id=table2_4cols>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>company_name</th>
+<th>phone</th>
+<th>address</th>
+</tr>
+{% for i in t2 %}
+<tr>
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[2]}}</td>
+<td>{{i[3]}}</td>
+<td>{{i[4]}}</td>
+</tr>
+{% endfor %}
+</table>
+<br><br><br><hr>
+</div>
+<div>
+<h3>Line items</h3>
+<table id=table1_5cols>
+<tr>
+
+<th>invoicecode</th>
+<th>itemname</th>
+<th>cost</th>
+<th>quantity</th>
+</tr>
+{% for i in t3 %}
+<tr>
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[2]}}</td>
+<td>{{i[3]}}</td>
+
+</tr>
+{% endfor %}
+
+</table>
+<br><br><br><hr>
+</div>
+<div>
+<h3>Invoices</h3>
+<table id=table1_6cols>
+<tr>
+<th>id</th>
+<th>invoice_date</th>
+<th>cuscode</th>
+<th>discount</th>
+<th>subtotal</th>
+<th>total</th>
+</tr>
+{% for i in t4 %}
+<tr>
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[2]}}</td>
+<td>{{i[3]}}</td>
+<td>{{i[4]}}</td>
+<td>{{i[5]}}</td>
+</tr>
+{% endfor %}
+</table>
+<hr><hr>
+<br>
+</div>
+</center>
+</body>
+</html>
